@@ -1,5 +1,15 @@
 {
+  "name": "stacktrace-ai",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "stacktrace-ai": "bin/cli.js"
+  },
   "dependencies": {
-    "@huggingface/inference": "^4.13.18"
+    "@huggingface/inference": "^4.13.18",
+    "dotenv": "^17.4.2",
+    "lodash": "^4.17.21",
+    "markdown-to-txt": "^2.0.1"
   }
 }
