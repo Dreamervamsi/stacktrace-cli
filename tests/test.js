@@ -1,8 +1,11 @@
-import '../dist/suggestor.js'
-
-function triggerError() {
-   const data = null;
-    console.log(data.error);
+import '../dist/cli.js';
+function recursiveCrash(n) {
+    if (n === 0) {
+       const data = undefined;
+        return data.access; 
+    }
+    return recursiveCrash(n - 1);
 }
 
-triggerError();
+console.log("--- Triggering Massive Recursive Error ---");
+recursiveCrash(1000);

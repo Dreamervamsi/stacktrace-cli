@@ -10,6 +10,7 @@
     "@huggingface/inference": "^4.13.18",
     "dotenv": "^17.4.2",
     "lodash": "^4.17.21",
-    "markdown-to-txt": "^2.0.1"
+    "markdown-to-txt": "^2.0.1",
+    "typescript": "^6.0.3"
   }
 }
