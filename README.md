@@ -28,3 +28,111 @@ This package uses the [Hugging Face Inference API](https://huggingface.co/infere
 
    ```bash
    HF_TOKEN=your_hf_access_token_here
+   ```
+
+---
+
+## Installation
+
+### Via npm
+
+```bash
+npm install stacktrace-ai
+```
+
+### Via yarn
+
+```bash
+yarn add stacktrace-ai
+```
+
+### Via pnpm
+
+```bash
+pnpm add stacktrace-ai
+```
+
+---
+
+## Usage
+
+### 1. Set Up Your Hugging Face Token
+
+Create a `.env` file in your project root:
+
+```bash
+HF_TOKEN=your_hf_access_token_here
+```
+
+### 2. Import in Your Application
+
+Add the following import **at the very beginning** of your main Node.js application file (before any other code):
+
+```javascript
+import 'stacktrace-ai';
+```
+
+For CommonJS:
+
+```javascript
+require('stacktrace-ai');
+```
+
+### 3. That's It!
+
+The tool will automatically intercept any uncaught exceptions. When an error occurs:
+
+1. **Error Detection:** The app catches the uncaught exception
+2. **AI Analysis:** The stack trace is sent to Hugging Face's Llama-3 model
+3. **Report Generation:** An `error-handler.md` file is created in your project root with:
+   - Exact error description
+   - Root cause analysis
+   - Suggested fix
+
+### Example
+
+```javascript
+// app.js
+import 'stacktrace-ai'; // Must be first!
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+// Your application code
+function buggyFunction() {
+    const data = undefined;
+    return data.access; // This will trigger the error handler
+}
+
+buggyFunction();
+```
+
+Run your app:
+
+```bash
+node app.js
+```
+
+When the error occurs, check the generated `error-handler.md` for the AI-powered analysis.
+
+---
+
+## Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `HF_TOKEN` | Your Hugging Face API token | ✅ Yes |
+
+---
+
+## Example Output
+
+When an error is caught, you'll see:
+
+```
+An unexpected error occurred. Analyzing with AI...
+--- AI Analysis ---
+💡 Suggested Fix is written in error-handler.md file
+```
+
+The generated `error-handler.md` will contain a detailed analysis of the error and how to fix it
