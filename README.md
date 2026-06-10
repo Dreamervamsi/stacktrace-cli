@@ -1,8 +1,8 @@
-# stacktrace-ai
+# tracer-ai
 
-`stacktrace-ai` is a powerful, AI-driven diagnostic tool that turns cryptic, complex Node.js stack traces into human-readable, actionable debugging insights.
+`tracer-ai` is a powerful, AI-driven diagnostic tool that turns cryptic, complex Node.js stack traces into human-readable, actionable debugging insights.
 
-When your application crashes unexpectedly due to an unhandled exception, `stacktrace-ai` intercepts the error, sends the stack trace to an advanced LLM (via Hugging Face), and generates a concise report explaining the root cause and providing a suggested fix.
+When your application crashes unexpectedly due to an unhandled exception, `tracer-ai` intercepts the error, sends the stack trace to an advanced LLM (via Hugging Face), and generates a concise report explaining the root cause and providing a suggested fix.
 
 ## Features
 
@@ -37,19 +37,19 @@ This package uses the [Hugging Face Inference API](https://huggingface.co/infere
 ### Via npm
 
 ```bash
-npm install stacktrace-ai
+npm install tracer-ai
 ```
 
 ### Via yarn
 
 ```bash
-yarn add stacktrace-ai
+yarn add tracer-ai
 ```
 
 ### Via pnpm
 
 ```bash
-pnpm add stacktrace-ai
+pnpm add tracer-ai
 ```
 
 ---
@@ -69,13 +69,13 @@ HF_TOKEN=your_hf_access_token_here
 Add the following import **at the very beginning** of your main Node.js application file (before any other code):
 
 ```javascript
-import 'stacktrace-ai';
+import 'tracer-ai';
 ```
 
 For CommonJS:
 
 ```javascript
-require('stacktrace-ai');
+require('tracer-ai');
 ```
 
 ### 3. That's It!
@@ -93,7 +93,7 @@ The tool will automatically intercept any uncaught exceptions. When an error occ
 
 ```javascript
 // app.js
-import 'stacktrace-ai'; // Must be first!
+import 'tracer-ai'; // Must be first!
 import dotenv from 'dotenv';
 
 dotenv.config();
