@@ -1,10 +1,10 @@
 {
-  "name": "stacktrace-ai",
+  "name": "tracer-ai",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "stacktrace-ai": "bin/cli.js"
+    "tracer-ai": "bin/cli.js"
   },
   "dependencies": {
     "@huggingface/inference": "^4.13.18",
