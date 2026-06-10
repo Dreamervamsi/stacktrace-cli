@@ -10,7 +10,16 @@
     "@huggingface/inference": "^4.13.18",
     "dotenv": "^17.4.2",
     "lodash": "^4.17.21",
-    "markdown-to-txt": "^2.0.1",
+    "markdown-to-txt": "^2.0.1"
+  },
+  "devDependencies": {
     "typescript": "^6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dreamervamsi/stacktrace-ai.git"
+  },
+  "author": {
+    "name": "Vamsi Krishna"
   }
 }
