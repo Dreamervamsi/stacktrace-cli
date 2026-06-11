@@ -39,19 +39,6 @@ This package uses the [Hugging Face Inference API](https://huggingface.co/infere
 ```bash
 npm install tracer-ai
 ```
-
-### Via yarn
-
-```bash
-yarn add tracer-ai
-```
-
-### Via pnpm
-
-```bash
-pnpm add tracer-ai
-```
-
 ---
 
 ## Usage
